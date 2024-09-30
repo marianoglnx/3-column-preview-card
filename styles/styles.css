@@ -1,0 +1,130 @@
+:root {
+
+	--brightOrange:     hsl(31, 77%, 52%);
+	--darkCyan:         hsl(184, 100%, 22%);
+	--veryDarkCyan:     hsl(179, 100%, 13%);
+	--transparentWhite: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+	--veryLightGray:    hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
+	color: var(--transparentWhite);
+}
+
+#view {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--veryLightGray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 90px 0;
+}
+
+#view .main-box {
+	width: 75%;
+	display: flex;
+	min-height: 530px;
+	border-radius: 5px;
+	max-width: 950px;
+}
+
+.main-box .section{
+	width: 33.3333333333333333333333333%;
+	padding: 45px;
+	position: relative;
+}
+
+.main-box .sedans{
+	background-color: var(--brightOrange);
+	border-radius: 5px 0 0 5px;
+}
+
+.main-box .suvs{
+	background-color: var(--darkCyan);
+}
+
+.main-box .luxury{
+	background-color: var(--veryDarkCyan);
+	border-radius: 0px 5px 5px 0;
+}
+
+.margin-div {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+.section-title {
+	font-family: 'big-shoulders';
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.section-text {
+	line-height: 25px;
+}
+
+.btn {
+	background-color: white;
+	text-align: center;
+	width: 150px;
+	padding: 13px;
+	border-radius: 40px;
+	cursor: pointer;
+	border: 3px solid transparent;
+	transition: all .2s ease-in-out;
+	position: absolute;
+	bottom: 45px;
+	left: 45px;
+}
+
+.btn:hover {
+	border-color: var(--transparentWhite);
+	background-color: transparent;
+	color: white;
+}
+
+.btn-sedans {color: var(--brightOrange);}
+.btn-suvs   {color: var(--darkCyan);}
+.btn-luxury {color: var(--veryDarkCyan);}
+
+@media (max-width: 1020px) {
+
+	.main-box .section{
+		padding: 35px;
+	}
+
+	.btn { bottom: 35px; left: 35px; }
+
+}
+
+@media (max-width: 950px) {
+
+	#view .main-box {
+		width: 65%;
+		display: flex;
+		flex-direction: column
+	}
+
+	.main-box .section{
+		width: 100%
+	}
+
+	.main-box .sedans{ border-radius: 5px 5px 0 0; }
+	.main-box .luxury{ border-radius: 0 0 5px 5px; }
+
+}
+
+@media (max-width: 700px) {
+
+	#view .main-box {
+		width: 90%;
+	}
+
+}
